@@ -1,0 +1,410 @@
+    body {
+        background: url("sfondo.jpeg");
+        color: white;
+        margin: 0;
+        padding: 0;
+        transition: opacity 0.5s ease-out;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    #background {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        z-index: -1;
+        background: #111;
+        display: block;
+    }
+
+    .arena {
+        display: grid;
+        grid-template-columns: 1fr auto 1fr;
+        align-items: center;
+        margin-top: 40px;
+        padding: 0 20px;
+    }
+
+    .versus {
+        font-size: 100px;
+        text-align: center;
+        background: linear-gradient(to right, #5290d7, #6fceb6);
+        background-clip: text;
+        color: transparent;
+        align-self: center;
+    }
+
+    #infoRound {
+        text-align: center;
+        padding-top: 100px;
+        font-size: 30px;
+        background: linear-gradient(to right, #5290d7, #6fceb6);
+        background-clip: text;
+        color: transparent;
+        font-weight: bold;
+    }
+
+    #film1,
+    #film2 {
+        padding-top: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-self: center;
+        font-size: 40px;
+        background: linear-gradient(to right, #5290d7, #6fceb6);
+        background-clip: text;
+        color: transparent;
+        font-weight: bold;
+        transition: transform 0.3s ease;
+    }
+
+    #film1 img,
+    #film2 img {
+        width: 350px;
+        height: 525px;
+        border-radius: 12px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        object-fit: cover;
+    }
+
+    #film1:hover,
+    #film2:hover {
+        transform: scale(1.05);
+    }
+
+    .titolo-vincitore {
+        text-align: center;
+        white-space: pre-line;
+        padding-bottom: 10px;
+        background: linear-gradient(to right, #5290d7, #6fceb6);
+        background-clip: text;
+        color: transparent;
+        font-size: 40px;
+    }
+
+    .container-vincitore {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+        box-sizing: border-box;
+        border-radius: 10px;
+        height: 525px;
+    }
+
+    .container-vincitore .imgVinci {
+        width: 300px;
+        height: 525px;
+        border-radius: 12px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        transition: transform 0.3s ease;
+    }
+
+    .grande-vincitore {
+        width: 800px;
+        height: 700px;
+        border-radius: 12px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        transition: transform 0.3s ease;
+    }
+
+    .container-vincitore .imgVinci:hover,
+    .container-vincitore button:hover {
+        transform: scale(1.05);
+    }
+
+    .bottoneHome {
+        padding: 12px 20px;
+        margin-top: 20px;
+        font-size: 1.2rem;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        background: linear-gradient(to right, #5290d7, #6fceb6);
+        cursor: pointer;
+        transition: transform 0.3s ease;
+    }
+
+    .btn-close {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        font-size: 60px;
+        padding: 10px;
+        text-decoration: none;
+        transition: transform 0.3s ease;
+        background: linear-gradient(to right, #5290d7, #6fceb6);
+        background-clip: text;
+        color: transparent;
+    }
+
+    .btn-close:hover {
+        transform: scale(1.20);
+        cursor: pointer;
+    }
+
+    .contenitore {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        padding: 10px;
+    }
+
+    .card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        background: linear-gradient(#181818ee, #181818ee) padding-box,
+            linear-gradient(45deg, #5290d7, #00CFFF) border-box;
+        border: 1px solid transparent;
+        padding: 10px;
+        border-radius: 10px;
+        transition: transform 0.2s;
+        width: 500px;
+        height: 400px;
+    }
+
+    .card img {
+        width: 100%;
+        height: 300px;
+        border-radius: 10px;
+        object-fit: cover;
+    }
+
+    .card:hover {
+        transform: scale(1.02);
+    }
+
+    .contenitore p {
+        margin-bottom: 10px;
+        text-align: center;
+        font-size: 30px;
+        color: #dddddd;
+        font-weight: bold;
+        text-shadow: 2px 2px 5px #5290d7;
+    }
+
+    h1,
+    #titolo {
+        text-align: center;
+        font-size: 60px;
+        color: #f5f5f5;
+        text-shadow: 2px 2px 5px #5290d7;
+    }
+
+    #titolo {
+        cursor: pointer;
+        font-size: 50px;
+    }
+
+    .nascosto {
+        display: none !important;
+    }
+
+    #cambia,
+    .menu-container,
+    .justify-evenly {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .menu-container {
+        backdrop-filter: blur(2px);
+        background: rgba(50, 50, 50, 0.4);
+    }
+
+    select {
+        background-color: #444;
+        color: white;
+        padding: 10px;
+        font-size: 15px;
+        border-radius: 5px;
+        outline: none;
+    }
+
+    select option {
+        background-color: #444;
+        color: white;
+    }
+
+    button {
+        background: linear-gradient(to right, #5290d7, #6fceb6);
+        color: white;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        font-size: 15px;
+        cursor: pointer;
+        scale: 1.05;
+        transition: transform 0.2s;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    button:hover {
+        transform: scale(1.05);
+    }
+
+    .bottonePlay {
+        margin-top: 10px;
+        float: right;
+    }
+
+    .finestra {
+        position: fixed;
+        inset: 0;
+        background-color: rgba(0, 0, 0, 0.7);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .contFin {
+        padding: 20px;
+        border-radius: 8px;
+        position: relative;
+        text-align: left;
+        background-color: #333;
+        width: 25%;
+    }
+
+    .contFin select {
+        width: 100%;
+    }
+
+    #container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .contFilm {
+        flex: 0 0 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        border-radius: 10px;
+        box-sizing: border-box;
+    }
+
+    .film {
+        width: 100%;
+        object-fit: cover;
+        height: 300px;
+        border-radius: 10px;
+        display: block;
+    }
+
+    .fade-out {
+        opacity: 0;
+        pointer-events: none;
+        background-color: #000011;
+        animation: fadeOut 0.5s ease-out forwards;
+    }
+
+    @keyframes fadeOut {
+        0% {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        100% {
+            opacity: 0;
+            transform: scale(0.95);
+        }
+    }
+
+    @media (max-width: 900px) {
+        .arena {
+            grid-template-columns: 1fr;
+            grid-template-rows: auto auto auto;
+        }
+
+        .versus {
+            font-size: 60px;
+            margin: 20px 0;
+        }
+
+        #infoRound {
+            padding-top: 30px;
+        }
+
+        #film2 {
+            margin-bottom: 30px;
+        }
+
+        #film1,
+        #film2 {
+            white-space: normal;
+            overflow: visible;
+            text-overflow: unset;
+        }
+
+        .btn-close {
+            top: 10px;
+            left: 10px;
+            font-size: 50px;
+            padding: 5px;
+        }
+    }
+
+    @media (max-width: 768px) {
+
+        h1,
+        #titolo {
+            font-size: 40px;
+        }
+
+        .card p {
+            font-size: 20px;
+        }
+
+        .menu-container {
+            flex-direction: column;
+        }
+
+        #filmTypeSelect {
+            width: 100%;
+            margin-top: 0.5rem;
+            text-align: center;
+        }
+
+        .justify-evenly {
+            flex-direction: column;
+        }
+    }
+
+    @media (max-width: 480px) {
+
+        h1,
+        #titolo {
+            font-size: 30px;
+        }
+
+        .card p {
+            font-size: 16px;
+        }
+
+        .contFin {
+            width: 90%;
+            padding: 1rem;
+        }
+
+        .film {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    * {
+        font-family: 'Poppins', sans-serif;
+    }
