@@ -144,7 +144,7 @@ function mostraFilmCorrenti() {
             gestisciClick(img1, film2);
         };
 
-    }, );
+    }, 50);
 }
 function gestisciClick(imgAvversario, filmVincitore) {
     vincitoriRound.push(filmVincitore);
