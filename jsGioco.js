@@ -147,17 +147,7 @@ function mostraFilmCorrenti() {
     }, 50);
 }
 
-function gestisciClick(imgAvversario, filmVincitore) {
-    vincitoriRound.push(filmVincitore);
-    imgAvversario.classList.add("fade-out");
 
-    setTimeout(() => {
-        filmInGioco.shift();
-        filmInGioco.shift();
-        matchNumero++;
-        mostraSfida();
-    }, 500);
-}
 
 // Avvia il gioco
 startGame();
