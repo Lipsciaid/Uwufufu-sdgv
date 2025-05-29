@@ -93,7 +93,7 @@
         padding: 20px;
         box-sizing: border-box;
         border-radius: 10px;
-        height:48%;
+        height: 525px;
     }
 
     .container-vincitore .imgVinci {
@@ -140,11 +140,6 @@
         background: linear-gradient(to right, #5290d7, #6fceb6);
         background-clip: text;
         color: transparent;
-    }
-
-    .btn-close:hover {
-        transform: scale(1.20);
-        cursor: pointer;
     }
 
     .contenitore {
