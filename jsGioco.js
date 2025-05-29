@@ -28,19 +28,16 @@ function mostraSfida() {
     if (infoRound) {
         infoRound.textContent = "Round " + nFilm + " Match " + matchNumero;
     }
-
     // Caso finale: un solo vincitore
     if (filmInGioco.length === 0 && vincitoriRound.length === 1) {
         mostraVincitoreFinale(vincitoriRound[0]);
         return;
     }
-
     // Fine round ma più vincitori
     if (filmInGioco.length === 0 && vincitoriRound.length > 1) {
         preparaNuovoRound();
         return;
     }
-
     // Mostra i due film corrente
     mostraFilmCorrenti();
 }
@@ -48,13 +45,11 @@ function mostraSfida() {
 function mostraVincitoreFinale(vincitore) {
     let film1d = document.getElementById("film1");
     let film2d = document.getElementById("film2");
-    let versusText = document.querySelector(".versus");
-    let x = document.querySelector(".btn-close");
+    let versusText = document.querySelector(".versus"); 
 
     film2d.style.display = "none";
     versusText.style.display = "none";
     document.getElementById("infoRound").textContent = "";
-    x.style.display = "none";
 
     film1d.innerHTML = "";
     film2d.innerHTML = "";
